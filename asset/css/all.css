@@ -429,7 +429,7 @@ p:not(:last-child) {
 }
 @media (max-width: 375px) {
   .header__inner {
-    padding: 20px 16px 36px 16px;
+    padding: 24px 16px ;
   }
 }
 
