@@ -557,8 +557,9 @@ p:not(:last-child) {
   position: relative;
 }
 
+
 .contact .row{
-  gap:12px;
+row-gap:12px;
 }
 
 .contactWhite {
