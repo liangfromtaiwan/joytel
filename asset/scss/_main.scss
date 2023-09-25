@@ -1,0 +1,930 @@
+.mv {
+  position: relative;
+}
+
+
+
+.contactWhite {
+  @include contact_1300 {
+    bottom: -22vh;
+    padding: 24px 52px;
+  }
+
+  width: 70vw;
+  min-width: 916px;
+  position: absolute;
+  left: 50%;
+  bottom: -24vh;
+  transform: translateX(-50%);
+  padding: 32px 72px;
+  border: 3px solid #2D8EDB;
+  background: #fff;
+  border-radius: 18px;
+  z-index: 99;
+
+  .contact__date {
+    input {
+      height: 54px;
+      width: 100%;
+      border: 1px #333 solid;
+      border-radius: 6px;
+
+    }
+
+    .contact__dateStart,
+    .contact__dateEnd {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: url(../img/icon/icon_arrowDown-dark.png);
+        bottom: 21px;
+        right: 14px;
+      }
+    }
+  }
+
+  .contact__lists {
+    margin: 16px 0 4px 0;
+
+    &__list {
+      input {
+        width: 24px;
+        height: 24px;
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .contact__total {
+    display: flex;
+    margin-bottom: 12px;
+
+    .btn {
+      cursor: pointer;
+      line-height: 54px;
+      text-align: center;
+      @include btnOrange;
+      color: #fff;
+      border-radius: 6px;
+      width: 40%;
+      margin-right: 12px;
+    }
+
+    .totalMoney {
+      height: 54px;
+      border: 1px #333 solid;
+      border-radius: 6px;
+      width: 60%;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "合計：";
+        font-weight: 700;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        position: absolute;
+        content: "円";
+        font-weight: 700;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.contact.spOnly1024 {
+  padding: 60px 0;
+}
+
+.contactSpOnly {
+  @include pad {
+    padding: 24px 16px;
+
+    .row {
+      gap: 12px;
+    }
+  }
+
+  padding: 40px 72px;
+  border: 3px solid #2D8EDB;
+  background: #fff;
+  border-radius: 18px;
+
+  .contact__date {
+    input {
+      height: 54px;
+      width: 100%;
+      border: 1px #333 solid;
+      border-radius: 6px;
+
+    }
+
+    .contact__dateStart,
+    .contact__dateEnd {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: url(../img/icon/icon_arrowDown-dark.png);
+        bottom: 21px;
+        right: 14px;
+      }
+    }
+  }
+
+  .contact__lists {
+    margin: 16px 0 4px 0;
+
+    &__list {
+      input {
+        width: 24px;
+        height: 24px;
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .contact__total {
+    display: flex;
+    margin-bottom: 12px;
+
+    .btn {
+      cursor: pointer;
+      line-height: 54px;
+      text-align: center;
+      @include btnOrange;
+      color: #fff;
+      border-radius: 6px;
+      width: 40%;
+      margin-right: 12px;
+    }
+
+    .totalMoney {
+      height: 54px;
+      border: 1px #333 solid;
+      border-radius: 6px;
+      width: 60%;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "合計：";
+        font-weight: 700;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        position: absolute;
+        content: "円";
+        font-weight: 700;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact__ttl {
+    margin-bottom: 32px;
+    position: relative;
+    color: #333;
+
+    &::after {
+      position: absolute;
+      content: url(../img/icon/icon_fukidasi-left.png);
+      left: -24px;
+      bottom: -4px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url(../img/icon/icon_fukidasi-right.png);
+      right: -24px;
+      bottom: -4px;
+    }
+  }
+
+  .img {
+    margin-bottom: 16px;
+    width: 80%;
+  }
+
+  .contact__btn {
+    width: 95%;
+    border-radius: 6px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    @include btnGreen;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.ttl {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  padding-top: 100px;
+
+  @include pad {
+    margin-bottom: 40px;
+    padding-top: 60px;
+  }
+}
+
+.arrive {
+  position: relative;
+  background-image: url(../img/photo/img_arrive_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  @include pad {
+    background-image: none;
+    background: #E3E3E3;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: url(../img/photo/img_2-2.png);
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include pad {
+      top: 815px;
+
+      @include mobile {
+        top: 640px;
+      }
+    }
+  }
+
+  &__img {
+    width: 70%;
+    margin: 0 auto;
+
+    @include pad {
+      width: 100%;
+    }
+  }
+
+  .inner {
+    padding: 0;
+  }
+
+  &__warp {
+    position: relative;
+    margin-bottom: 24px;
+
+    .h2 {
+      padding-top: 30vh;
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+
+      &::before {
+        position: absolute;
+        content: url(../img/icon/icon_tower.png);
+        right: -15px;
+        bottom: 0;
+
+        @include mobile {
+          right: 23px;
+        }
+      }
+
+      @include pad {
+        padding-top: 60px;
+      }
+
+    }
+
+    &::after {
+      position: absolute;
+      // content: url(../img/icon/icon_tower.png);
+      left: 60%;
+      top: 298px;
+      font-weight: 700;
+      transform: translate(-50%, -50%);
+
+      @include pad {
+        top: 60px;
+        left: 65%;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 2;
+      // content: "中国現地に到着...";
+      left: 50%;
+      top: 296px;
+      font-size: 32px;
+      font-weight: 700;
+      transform: translateX(-50%);
+
+      @include pad {
+        top: 60px;
+      }
+    }
+
+    .col-6.bgGray200 {
+      padding-top: 63px;
+      text-align: center;
+
+      @include pad {
+        padding-bottom: 272px;
+      }
+    }
+
+    .col-6.bgYellow {
+      padding-top: 7vh;
+      text-align: center;
+
+      @include pad {
+        padding-top: 272px;
+      }
+    }
+  }
+}
+
+.yellowLine{
+  text-decoration: underline 5px yellow;
+}
+
+.bgGray100 {
+  background: #F4F4F4;
+}
+
+.bgGray200 {
+  background: #E3E3E3;
+}
+
+.bgYellow {
+  background: #F8E3AF;
+}
+
+.worry {
+  padding: 0 0 100px 0;
+  background-image: url(../img/photo/bgImg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include pad {
+    padding-bottom: 60px;
+  }
+}
+
+.worry__card {
+  &__02 {
+    margin-top: 48px;
+
+    @include pad {
+      margin-top: 24px;
+    }
+  }
+
+  &__03 {
+    margin-top: 96px;
+
+    @include pad {
+      margin-top: 24px;
+    }
+  }
+
+  &__04 {
+    margin-top: 144px;
+
+    @include pad {
+      margin-top: 24px;
+    }
+  }
+
+  background: #fff;
+  padding: 16px 6px;
+  border:2px solid #2D8EDB;
+  border-radius: 18px;
+  display: flex;
+  height: 320px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .worry__card__ttl {
+    color: #2D8EDB;
+    margin-bottom: 24px;
+  }
+
+  .worry__card__img {
+    margin-top: auto;
+    margin-bottom: 24px;
+
+    @include pad {
+      margin-top: 0px;
+    }
+  }
+}
+
+.todo {
+  background: #F4F4F4;
+  padding-bottom: 0.1px;
+
+  &__wrap {
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__cnt {
+      height: 100%;
+      padding: 16px 16px;
+      background: #fff;
+    }
+  }
+}
+
+
+.service {
+  background-image: url(../img/photo/bgImg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrap {
+    margin-bottom: 24px;
+    img{
+      margin-bottom: 24px;
+    }
+
+  }
+}
+
+.staff {
+    margin-top: 80px;
+    position: relative;
+    @include pad{
+      margin-top: 40px;
+    }
+    .col-4{
+      display: flex;
+      justify-content: center;
+    }
+    &__cnt {
+      &__fukidasi {
+        border: 1px solid #2D8EDB;
+        border-radius: 18px;
+        padding: 40px;
+        margin-bottom: 60px;
+        position: relative;
+        background: #fff;
+        @include pad{
+          padding: 24px;
+        }
+
+        &::after {
+          position: absolute;
+          content: url(../img/photo/img_staff_point.png);
+top: 111px;
+          left: -35px;
+          @include pad{
+
+                top: -35px;
+                left: 40px;
+          content: url(../img/photo/img_staff_point__02.png);
+
+          }
+        }
+      }
+    }
+
+  
+  }
+
+.andoroid {
+  padding-bottom: 100px;
+  background: #F4F4F4;
+@include pad{
+  padding-bottom: 60px;
+}
+  &__img {
+    margin-bottom: 24px;
+  }
+}
+
+.option {
+  padding-bottom: 100px;
+  background-image: url(../img/photo/bgImg.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include pad {
+    padding-bottom: 60px;
+  }
+  &__wrap {
+    background: #fff;
+    border: 3px solid #2D8EDB;
+    border-radius: 18px;
+
+    &__01 {
+      padding: 60px 48px 60px 280px;
+      margin-top: 120px;
+      margin-left: 160px;
+      position: relative;
+
+      @include pad {
+        margin-top: 24px;
+        padding: 40px 24px;
+        margin-left: 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: url(../img/photo/img_7-1.png);
+        left: -160px;
+        bottom: 48px;
+
+        @include pad {
+          display: none;
+        }
+      }
+
+    }
+
+    &__02 {
+      padding: 60px 280px 60px 68px;
+      margin-top: 210px;
+      margin-right: 160px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        content: url(../img/photo/img_7-2.png);
+        right: -160px;
+        bottom: 30px;
+
+        @include pad {
+          display: none;
+        }
+      }
+
+      @include pad {
+        margin-top: 24px;
+        padding: 40px 24px;
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  .h3 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+    text-decoration: underline yellow 5px;
+  }
+
+  p {
+    display: inline-block;
+  }
+}
+
+.wifi {
+  padding-bottom: 100px;
+  background: #F4F4F4;
+
+  @include pad {
+    padding-bottom: 60px;
+  }
+
+  &__wrap__01 {
+    position: relative;
+    margin-bottom: 126px;
+    &__img{
+      @include pad{
+        height: 500px;
+        width: 100%;
+        border-radius: 18px;
+      }
+      @include mobile{
+        height: 360px;
+      }
+    }
+
+    &__cnt {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      width: 84%;
+      padding: 20px 0;
+      background: #fff;
+      border: 3px solid #2D8EDB;
+      border-radius: 18px;
+      transform: translateX(-50%);
+      bottom: -74px;
+    }
+  }
+
+  &__wrap__02__box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .cnt {
+      padding: 36px 24px;
+      background: #fff;
+      border-left: 3px solid #2D8EDB;
+      border-right: 3px solid #2D8EDB;
+      border-bottom: 3px solid #2D8EDB;
+      border-radius: 0 0 18px 18px;
+      height: 100%;
+      @include pad{
+        padding: 24px 16px;
+      }
+    }
+  }
+}
+
+.faq {
+  padding-bottom: 100px;
+
+  @include pad {
+    padding-bottom: 60px;
+  }
+
+  .item {
+    padding: 0 24px;
+    border-radius: 12px;
+    border: 2px solid #005598;
+    background: #FFF;
+    @include pad{
+      padding: 0 12px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &__q {
+      position: relative;
+      padding: 24px 32px 24px 52px;
+      cursor: pointer;
+      width: 100%;
+
+      @include pad {
+        padding: 16px 24px 16px 30px;
+      }
+
+      &::before {
+        position: absolute;
+        content: url(../img/icon/icon_Q.png);
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include pad {
+          left: px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        border: 1px solid #E5E5E5;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        width: calc(100% - 52px);
+        margin-left: 52px;
+        z-index: -1;
+
+        @include pad {
+          width: calc(100% - 30px);
+          margin-left: 30px;
+        }
+      }
+
+      .cross {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+          position: absolute;
+          width: 22px;
+          height: 2px;
+          content: "";
+          background-color: #005598;
+          transition: .2s ease;
+        }
+
+        &::after {
+          position: absolute;
+          width: 22px;
+          height: 2px;
+          content: "";
+          background-color: #005598;
+          transition: .2s ease;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &__a {
+      padding: 24px 32px 24px 52px;
+      position: relative;
+      display: none;
+
+      @include pad {
+        padding: 16px 24px 16px 30px;
+      }
+
+      &::before {
+        position: absolute;
+        content: url(../img/icon/icon_A.png);
+        left: 0;
+        top: 32px;
+
+        @include pad {
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+.faq__items .item.active .item__q span::after {
+  transform: rotate(180deg);
+}
+
+.faq__items .item.active .item__q span::before {
+  transform: rotate(360deg);
+}
+
+
+
+
+.bgBlue100 {
+  background: #D1E9F2;
+}
+
+.contactBlue {
+  padding-bottom: 100px;
+  color: #fff;
+  z-index: 2;
+
+  .contact__box__01 {
+    padding: 40px 30px;
+    background: #005598;
+    border-radius: 18px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+ 
+  }
+
+  .contact__box__02 {
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 18px;
+    border: 3px solid #2D8EDB;
+  }
+
+  .contact__date {
+    input {
+      height: 54px;
+      width: 100%;
+      border: 1px #333 solid;
+      border-radius: 6px;
+
+    }
+
+    .contact__dateStart,
+    .contact__dateEnd {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: url(../img/icon/icon_arrowDown-dark.png);
+        bottom: 21px;
+        right: 14px;
+      }
+    }
+  }
+
+  .contact__lists {
+    margin: 16px 0 4px 0;
+
+    &__list {
+      input {
+        width: 24px;
+        height: 24px;
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .contact__total {
+    display: flex;
+    margin-bottom: 12px;
+
+    .btn {
+      cursor: pointer;
+      line-height: 54px;
+      text-align: center;
+      @include btnOrange;
+      color: #fff;
+      border-radius: 6px;
+      width: 40%;
+      margin-right: 12px;
+    }
+
+    .totalMoney {
+      color: #333;
+      height: 54px;
+      border: 1px #333 solid;
+      background: #fff;
+      border-radius: 6px;
+      width: 60%;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "合計：";
+        font-weight: 700;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+      }
+
+      &::before {
+        position: absolute;
+        content: "円";
+        font-weight: 700;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 18px 0;
+  background: #333;
+  color: #fff;
+}
+
+
+
+
+@media(max-width:330px){
+
+  .contact__ttl{
+  font-size: 12px;   
+  }
+  .arrive::after{
+    top: 572px;
+  }
+}

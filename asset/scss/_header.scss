@@ -1,0 +1,136 @@
+.header {
+  z-index: 888;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  transition: 0.4s;
+  &__wrap{
+    position: fixed;
+    width: 100%;
+     background-image: url(../img/photo/img_header-pc.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  @include pad{
+    background-image: url(../img/photo/img_header-sp.png);
+
+  }
+  }
+}
+
+.header__inner {
+  display: flex;
+    min-width: 1180px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 36px;
+
+  @include mobile{
+    padding: 20px 16px 36px 16px;
+  }
+}
+
+.header__menu {
+  @include jc-sb;
+  gap: 32px;
+  li{
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  & .cta {
+    padding: 12px 32px;
+    @include btnOrange;
+    border-radius: 500px;
+
+    & a {
+      color: #fff;
+    }
+  }
+
+  @include pad {
+    display: none;
+  }
+}
+
+
+
+.header__hamburger {
+  display: none;
+  position: absolute;
+  top: 26px;
+right: 24px;
+  cursor: pointer;
+  z-index: 999;
+
+  & span {
+    height: 2px;
+    width: 32px;
+    @include colorBlue300;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  @include pad {
+    display: block;
+  }
+}
+
+
+.header__inner.active .header__menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    a{
+      font-size: 18px;
+    }
+}
+
+.header__inner.active .header__logo{
+  display: none;
+}
+
+@media(max-width:330px){
+ .header__logo img{
+    width: 235px;
+ }
+}
+
+.header__hamburger.active{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 36px;
+    right: 31px;
+}
+
+.header__hamburger.active  span {
+    position: absolute;
+    margin-bottom: 0;
+}
+
+
+.header__hamburger.active  span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.header__hamburger.active span:nth-child(2) {
+    display: none;
+}
+
+.header__hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+

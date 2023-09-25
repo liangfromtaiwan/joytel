@@ -1,0 +1,80 @@
+// 常用顏色， bg,text,border
+
+@mixin btnOrange {
+  background: #F27900;
+}
+
+@mixin btnGreen{
+  background: #1CAE82;
+}
+
+@mixin bgGray100{
+  background: #F4F4F4;
+}
+
+@mixin  bgGray200{
+  background: #E3E3E3;
+}
+
+@mixin bgYellow{
+  background: #F8E3AF;
+}
+
+@mixin colorBlue100{
+  background: #EDF7FF;
+}
+
+@mixin  colorBlue200{
+  background: #2D8EDB;
+}
+
+@mixin  colorBlue300{
+  background: #005598;
+}
+
+@mixin  borderBlue300{
+  border:2px #005598 solid;
+}
+
+
+
+@mixin jc-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//::after,::before的位置調整使用
+
+@mixin transHalf {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//設定斷點
+
+@mixin pad {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media(max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin contact_1300{
+    @media (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin bp_888{
+    @media (max-width: 888px) {
+    @content;
+  }
+}
+
