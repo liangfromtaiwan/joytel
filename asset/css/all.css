@@ -468,6 +468,7 @@ p:not(:last-child) {
     position: fixed;
     top: 0px;
     left: 0px;
+    transition: 0.3s;
   }
 }
 
@@ -495,7 +496,7 @@ p:not(:last-child) {
   .header__hamburger {
     display: block;
   }
-  .header__inner.active .header__menu__items a {
+  .header__inner .header__menu__items a {
   font-size: 18px;
 }
 }
