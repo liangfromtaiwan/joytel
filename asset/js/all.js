@@ -3,8 +3,8 @@ $(document).ready(function () {
   $(".header__hamburger").click(function (e) { 
     e.preventDefault();
     $(".header__hamburger").toggleClass("active");
-    $(".header__menu__items").slideToggle();
-    $(".header__menu__items").css("display", "flex");
+    $(".header__menu").slideToggle();
+    $(".header__menu").css("display", "flex");
      $(".header__inner").toggleClass("active");
   });
 });
