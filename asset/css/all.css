@@ -459,7 +459,7 @@ p:not(:last-child) {
   color: #fff;
 }
 @media (max-width: 1024px) {
-  .header__menu__items {
+  .header__menu {
     display: none;
   }
 }
