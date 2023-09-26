@@ -4,6 +4,7 @@ $(document).ready(function () {
     e.preventDefault();
     $(".header__hamburger").toggleClass("active");
     $(".header__menu").slideToggle();
+     $(".header__inner").toggleClass("active");
   });
 });
 
