@@ -5,7 +5,6 @@ $(document).ready(function () {
     $(".header__hamburger").toggleClass("active");
     $(".header__menu").slideToggle();
     $(".header__menu").css("display", "flex");
-    $(".header__hamburger").css("position", "fixed");
      $(".header__inner").toggleClass("active");
   });
 });

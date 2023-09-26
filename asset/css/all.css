@@ -551,6 +551,7 @@ p:not(:last-child) {
           justify-content: center;
   top: 36px;
   right: 31px;
+  position: fixed;
 }
 
 .header__hamburger.active span {
