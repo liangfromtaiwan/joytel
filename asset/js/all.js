@@ -3,8 +3,9 @@ $(document).ready(function () {
   $(".header__hamburger").click(function (e) { 
     e.preventDefault();
     $(".header__hamburger").toggleClass("active");
-    $(".header__menu").slideToggle();
+    $(".header__menu").fadeToggle();
      $(".header__inner").toggleClass("active");
+     
   });
 });
 
