@@ -426,6 +426,7 @@ p:not(:last-child) {
       -ms-flex-align: center;
           align-items: center;
   padding: 24px 36px;
+
 }
 @media (max-width: 375px) {
   .header__inner {
@@ -479,6 +480,8 @@ p:not(:last-child) {
   display: block;
     transition:0.3s;
 }
+
+
 .header__hamburger span:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -486,6 +489,9 @@ p:not(:last-child) {
   .header__hamburger {
     display: block;
   }
+  .header__inner.active .header__menu__items a {
+  font-size: 18px;
+}
 }
 
 
@@ -515,9 +521,7 @@ p:not(:last-child) {
 }
 
 
-.header__inner.active .header__menu__items a {
-  font-size: 18px;
-}
+
 
 .header__inner.active .header__logo {
   display: none;
