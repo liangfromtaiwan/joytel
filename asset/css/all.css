@@ -467,7 +467,7 @@ p:not(:last-child) {
   display: none;
   position: absolute;
   top: 26px;
-  right: 24px;
+  right: 26px;
   cursor: pointer;
   z-index: 999;
 }
@@ -476,6 +476,7 @@ p:not(:last-child) {
   width: 32px;
   background: #005598;
   display: block;
+    transition:0.3s;
 }
 .header__hamburger span:not(:last-child) {
   margin-bottom: 9px;

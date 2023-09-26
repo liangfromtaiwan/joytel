@@ -3,9 +3,10 @@ $(document).ready(function () {
   $(".header__hamburger").click(function (e) { 
     e.preventDefault();
     $(".header__hamburger").toggleClass("active");
-    $(".header__inner").toggleClass("active");
+    $(".header__menu").slideToggle();
   });
 });
+
 
 
 //faq
