@@ -434,7 +434,7 @@ p:not(:last-child) {
   }
 }
 
-.header__menu__items {
+.header__menu {
   transition: 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,16 +447,16 @@ p:not(:last-child) {
           align-items: center;
   gap: 32px;
 }
-.header__menu__items li {
+.header__menu li {
   font-size: 14px;
   font-weight: 700;
 }
-.header__menu__items .cta {
+.header__menu .cta {
   padding: 12px 32px;
   background: #F27900;
   border-radius: 500px;
 }
-.header__menu__items .cta a {
+.header__menu .cta a {
   color: #fff;
 }
 @media (max-width: 1024px) {
@@ -496,14 +496,14 @@ p:not(:last-child) {
   .header__hamburger {
     display: block;
   }
-  .header__inner .header__menu__items a {
+  .header__inner .header__menu a {
   font-size: 18px;
 }
 }
 
 
 @media (max-width:1024px) {
-  .header__inner .header__menu__items {
+  .header__inner .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
