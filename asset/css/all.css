@@ -474,7 +474,7 @@ p:not(:last-child) {
 
 .header__hamburger {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 26px;
   right: 17px;
   cursor: pointer;
