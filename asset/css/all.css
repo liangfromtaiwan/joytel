@@ -49,6 +49,9 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: source-han-sans-japanese, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
   background: #FEFEFE;
@@ -146,6 +149,28 @@ p:not(:last-child) {
   text-align: center;
 }
 
+
+.mbS-Pc {
+  margin-bottom:8px;
+}
+.mbM-Pc  {
+  margin-bottom:16px;
+}
+
+.mbL-Pc  {
+  margin-bottom:24px;
+}
+
+.mtS-Pc  {
+  margin-top:8px;
+}
+.mtM-Pc  {
+  margin-top:16px;
+}
+.mtL-Pc  {
+  margin-top:24px;
+}
+
 .spOnly {
   display: none;
 }
@@ -194,6 +219,26 @@ p:not(:last-child) {
   }
   .h6 {
     font-size: 14px;
+  }
+  .mbS-Sp {
+    margin-bottom:8px;
+  }
+  .mbM-Sp  {
+    margin-bottom:16px;
+  }
+
+  .mbL-Sp  {
+    margin-bottom:24px;
+  }
+
+  .mtS-Sp  {
+    margin-top:8px;
+  }
+  .mtM-Sp  {
+    margin-top:16px;
+  }
+  .mtL-Sp  {
+    margin-top:24px;
   }
 }
 .container {
@@ -425,17 +470,18 @@ p:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 24px 36px;
+  padding: 24px 16px;
 
 }
+/*
 @media (max-width: 375px) {
   .header__inner {
     padding: 24px 16px ;
   }
-}
+}*/
 
 .header__menu {
-  transition: 0.3s;
+  /*transition: 0.3s;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,14 +497,23 @@ p:not(:last-child) {
   font-size: 14px;
   font-weight: 700;
 }
-.header__menu .cta {
+
+
+.header__menu .cta a {
   padding: 12px 32px;
   background: #F27900;
   border-radius: 500px;
-}
-.header__menu .cta a {
+  border: 1px solid #F27900;
   color: #fff;
 }
+
+.header__menu .cta a:hover{
+  border: 1px solid #F27900;
+  background: #fff;
+  color: #F27900;
+  color: #F27900;
+}
+
 @media (max-width: 1024px) {
   .header__menu {
     display: none;
@@ -468,7 +523,7 @@ p:not(:last-child) {
     position: fixed;
     top: 0px;
     left: 0px;
-    transition: 0.3s;
+    /*transition: 0.3s;*/
   }
 }
 
@@ -529,16 +584,15 @@ p:not(:last-child) {
 
 
 
+.header__inner .header__logo img {
+  max-width:245px;
+}
 
 .header__inner.active .header__logo {
   display: none;
 }
 
-@media (max-width: 330px) {
-  .header__logo img {
-    width: 235px;
-  }
-}
+
 .header__hamburger.active {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -580,11 +634,13 @@ p:not(:last-child) {
 
 .contact .row{
 row-gap:12px;
+align-items: center;
 }
 
 .contactWhite {
   width: 70vw;
-  min-width: 916px;
+  min-width: 920px;
+  max-width: 1080px;
   position: absolute;
   left: 50%;
   bottom: -24vh;
@@ -602,23 +658,39 @@ row-gap:12px;
     padding: 24px 52px;
   }
 }
+@media (max-width: 1024px) {
+  .contactWhite {
+    padding: 40px 5%;
+    min-width: auto;
+    max-width: 100%;
+    position: static;
+    width: 90%;
+    margin: 40px auto;
+    -webkit-transform: translateX(0%);
+    transform: none;
+  }
+}
+
 .contactWhite .contact__date input {
   height: 54px;
   width: 100%;
   border: 1px #333 solid;
   border-radius: 6px;
+  padding-left: 16px;
+  font-size: 16px;
 }
 .contactWhite .contact__date .contact__dateStart,
 .contactWhite .contact__date .contact__dateEnd {
   position: relative;
 }
+/*
 .contactWhite .contact__date .contact__dateStart::after,
 .contactWhite .contact__date .contact__dateEnd::after {
   position: absolute;
   content: url(../img/icon/icon_arrowDown-dark.png);
   bottom: 21px;
   right: 14px;
-}
+}*/
 .contactWhite .contact__lists {
   margin: 16px 0 4px 0;
 }
@@ -629,8 +701,9 @@ row-gap:12px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 6px;
+  white-space: nowrap;
 }
 .contactWhite .contact__lists__list input {
   width: 24px;
@@ -640,27 +713,35 @@ row-gap:12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 12px;
+  margin-top:10px;
+  margin-bottom: 6px;
 }
 .contactWhite .contact__total .btn {
   cursor: pointer;
   line-height: 54px;
   text-align: center;
-  background: #F27900;
+  background: #ffa200;
   color: #fff;
   border-radius: 6px;
   width: 40%;
+  border: 1px solid #ffa200;
   margin-right: 12px;
 }
 .contactWhite .contact__total .totalMoney {
   height: 54px;
   border: 1px #333 solid;
+  color: #ffa042;
   border-radius: 6px;
   width: 60%;
   position: relative;
+  line-height: 50px;
+  font-size: 32px;
+  padding-left: 70px;
 }
 .contactWhite .contact__total .totalMoney::after {
   position: absolute;
+  color: #333;
+  font-size: 16px;
   content: "合計：";
   font-weight: 700;
   top: 50%;
@@ -670,12 +751,50 @@ row-gap:12px;
 }
 .contactWhite .contact__total .totalMoney::before {
   position: absolute;
-  content: "円";
+  color: #333;
+  font-size: 16px;
+  content: "RMB";
   font-weight: 700;
   top: 50%;
   right: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+  .contactWhite .contact__total .totalMoney {
+    height: 54px;
+    border: 1px #333 solid;
+    color: #F27900;
+    border-radius: 6px;
+    width: 60%;
+    position: relative;
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 60px;
+  }
+  .contactWhite .contact__total .totalMoney::after {
+    position: absolute;
+    color: #333;
+    font-size: 14px;
+    content: "合計：";
+    font-weight: 700;
+    top: 50%;
+    left: 12px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .contactWhite .contact__total .totalMoney::before {
+    position: absolute;
+    color: #333;
+    font-size: 14px;
+    content: "RMB";
+    font-weight: 700;
+    top: 50%;
+    right: 12px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .contact.spOnly1024 {
@@ -772,6 +891,13 @@ row-gap:12px;
           transform: translateY(-50%);
 }
 
+.img_80{
+  width: 80%;
+}
+.img_316{
+  width: 316px;
+}
+
 .contact__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -785,7 +911,7 @@ row-gap:12px;
           align-items: center;
 }
 .contact__box .contact__ttl {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
   position: relative;
   color: #333;
 }
@@ -803,14 +929,15 @@ row-gap:12px;
 }
 .contact__box .img {
   margin-bottom: 16px;
-  width: 80%;
+  /* width: 80%; */
 }
 .contact__box .contact__btn {
-  width: 95%;
+  width: 100%;
   border-radius: 6px;
   height: 54px;
   text-align: center;
   line-height: 54px;
+  margin-top: auto;
   background: #1CAE82;
 }
 .contact__box .contact__btn a {
@@ -856,7 +983,7 @@ row-gap:12px;
 }
 @media (max-width: 1024px) {
   .arrive::after {
-    top: 815px;
+    top: 846px;
   }
 }
 @media (max-width: 1024px) and (max-width: 375px) {
@@ -884,11 +1011,11 @@ row-gap:12px;
   padding-top: 30vh;
   position: relative;
   margin: 0 auto;
-  width: 300px;
+  /* width: 300px; */
 }
 .arrive__warp .h2::before {
   position: absolute;
-  content: url(../img/icon/icon_tower.png);
+  /* content: url(../img/icon/icon_tower.png); */
   right: -15px;
   bottom: 0;
 }
@@ -979,6 +1106,10 @@ row-gap:12px;
   }
 }
 
+.worry .font-s{
+  margin-top: 24px;
+}
+
 .worry__card {
   background: #fff;
   padding: 16px 6px;
@@ -1057,10 +1188,25 @@ row-gap:12px;
   background: #fff;
 }
 
+.todo__wrap__cnt .cta{
+  border-radius: 500px;
+      padding: 12px 32px;
+        border:1px solid #F27900;
+        color: #F27900;  
+        font-weight: 700;
+        margin-bottom: 24px;
+}
+
+.todo__wrap__cnt .cta:hover{
+    color: #fff;
+   background: #F27900;
+}
+
 .service {
-  background-image: url(../img/photo/bgImg.png);
+  /* background-image: url(../img/photo/bgImg.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+    background: #F4F4F4;
 }
 .service__wrap {
   margin-bottom: 24px;
@@ -1114,8 +1260,11 @@ row-gap:12px;
 }
 
 .andoroid {
+    background-image: url(../img/photo/bgImg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
   padding-bottom: 100px;
-  background: #F4F4F4;
+  /* background: #F4F4F4; */
 }
 @media (max-width: 1024px) {
   .andoroid {
@@ -1251,13 +1400,17 @@ row-gap:12px;
           flex-direction: column;
   height: 100%;
 }
+
+.wifi__wrap__02__box img{
+  width: 100%;
+}
 .wifi__wrap__02__box .cnt {
   padding: 36px 24px;
   background: #fff;
   border-left: 3px solid #2D8EDB;
   border-right: 3px solid #2D8EDB;
   border-bottom: 3px solid #2D8EDB;
-  border-radius: 0 0 18px 18px;
+  border-radius: 0 0 18px 18px;Z
   height: 100%;
 }
 @media (max-width: 1024px) {
@@ -1269,6 +1422,28 @@ row-gap:12px;
 .faq {
   padding-bottom: 100px;
 }
+
+.faq .faq__title{
+text-align: center;
+margin-bottom: 40px;
+position: relative;
+font-size: 24px;  
+margin-top: 60px;
+}
+
+.faq__title::after{
+position: absolute;
+  content: "";
+  width: 28px;
+  height: 3px;
+  left: 50%;
+  bottom: -14px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #2D8EDB;
+
+}
+
 @media (max-width: 1024px) {
   .faq {
     padding-bottom: 60px;
@@ -1401,12 +1576,44 @@ row-gap:12px;
   background: #D1E9F2;
 }
 
+.contact .col-6{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__cta{
+  margin-top: auto;
+}
+
+.contact__cta a{
+  margin-top: 12px;
+  border: 1px solid #F27900;
+background: #F27900;
+  border-radius: 6px;
+  height: 54px;
+  text-align: center;
+  color: #fff;
+  line-height: 54px;
+  font-weight: 700;
+}
+
+.contact__cta a:hover{
+  background: #fff;
+              color: #F27900;
+}
+
+.contact .col-6 .contact__txt{
+  margin-top:8px;
+}
+
+
 .contactBlue {
   padding-bottom: 100px;
   color: #fff;
   z-index: 2;
 }
 .contactBlue .contact__box__01 {
+  /* border: 3px solid #005598; */
   padding: 40px 30px;
   background: #005598;
   border-radius: 18px;
@@ -1418,30 +1625,42 @@ row-gap:12px;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+          height: 480px;
 }
 .contactBlue .contact__box__02 {
   padding: 40px 30px;
   background: #fff;
   border-radius: 18px;
   border: 3px solid #2D8EDB;
+  display: flex;
+  height: 480px;
+}
+
+@media (max-width:1024px) {
+  .contactBlue .contact__box__01,.contactBlue .contact__box__02{
+    height: auto;
+  }
 }
 .contactBlue .contact__date input {
   height: 54px;
   width: 100%;
   border: 1px #333 solid;
   border-radius: 6px;
+  padding-left: 16px;
+  font-size: 16px;
 }
 .contactBlue .contact__date .contact__dateStart,
 .contactBlue .contact__date .contact__dateEnd {
   position: relative;
 }
+/*
 .contactBlue .contact__date .contact__dateStart::after,
 .contactBlue .contact__date .contact__dateEnd::after {
   position: absolute;
   content: url(../img/icon/icon_arrowDown-dark.png);
   bottom: 21px;
   right: 14px;
-}
+}*/
 .contactBlue .contact__lists {
   margin: 16px 0 4px 0;
 }
@@ -1464,12 +1683,13 @@ row-gap:12px;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 12px;
+  margin-top:16px;
 }
 .contactBlue .contact__total .btn {
   cursor: pointer;
   line-height: 54px;
   text-align: center;
-  background: #F27900;
+  background: #ffa200;
   color: #fff;
   border-radius: 6px;
   width: 40%;
@@ -1479,13 +1699,19 @@ row-gap:12px;
   color: #333;
   height: 54px;
   border: 1px #333 solid;
+  color: #F27900;
   background: #fff;
   border-radius: 6px;
   width: 60%;
   position: relative;
+  line-height: 50px;
+  font-size: 32px;
+  padding-left: 70px;
 }
 .contactBlue .contact__total .totalMoney::after {
   position: absolute;
+  color:#333;
+  font-size: 16px;
   content: "合計：";
   font-weight: 700;
   top: 50%;
@@ -1495,12 +1721,28 @@ row-gap:12px;
 }
 .contactBlue .contact__total .totalMoney::before {
   position: absolute;
-  content: "円";
+  color:#333;
+  font-size: 16px;
+  content: "RMB";
   font-weight: 700;
   top: 50%;
   right: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+  .contactBlue .contact__total .totalMoney {
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 60px;
+  }
+  .contactBlue .contact__total .totalMoney::after {
+    font-size: 14px;
+  }
+  .contactBlue .contact__total .totalMoney::before {
+    font-size: 14px;
+  }
 }
 
 .footer {
@@ -1509,12 +1751,19 @@ row-gap:12px;
   color: #fff;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 375px) {
   .contact__ttl {
     font-size: 12px;
   }
   .arrive::after {
-    top: 572px;
+    top: 668px;
   }
 }
+
+/* 本番サイト専用の消込CSS*/
+#simulation_input,
+#simulation_result {
+  display:none;
+}
+
 /*# sourceMappingURL=all.css.map */
